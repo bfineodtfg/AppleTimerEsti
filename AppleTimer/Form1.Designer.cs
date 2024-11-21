@@ -38,6 +38,14 @@ namespace AppleTimer
             this.fej = new System.Windows.Forms.PictureBox();
             this.kez = new System.Windows.Forms.PictureBox();
             this.alma = new System.Windows.Forms.PictureBox();
+            this.appleCounter = new System.Windows.Forms.Label();
+            this.storageLabel = new System.Windows.Forms.Label();
+            this.buyBiggerStorage = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.buyFasterHit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fold)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kosar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -127,11 +135,85 @@ namespace AppleTimer
             // alma
             // 
             this.alma.BackColor = System.Drawing.Color.Red;
-            this.alma.Location = new System.Drawing.Point(270, 232);
+            this.alma.Location = new System.Drawing.Point(263, 182);
             this.alma.Name = "alma";
             this.alma.Size = new System.Drawing.Size(17, 18);
             this.alma.TabIndex = 8;
             this.alma.TabStop = false;
+            // 
+            // appleCounter
+            // 
+            this.appleCounter.AutoSize = true;
+            this.appleCounter.Location = new System.Drawing.Point(556, 66);
+            this.appleCounter.Name = "appleCounter";
+            this.appleCounter.Size = new System.Drawing.Size(119, 13);
+            this.appleCounter.TabIndex = 9;
+            this.appleCounter.Text = "Gyűjtött almák száma: 0";
+            // 
+            // storageLabel
+            // 
+            this.storageLabel.AutoSize = true;
+            this.storageLabel.Location = new System.Drawing.Point(556, 100);
+            this.storageLabel.Name = "storageLabel";
+            this.storageLabel.Size = new System.Drawing.Size(134, 13);
+            this.storageLabel.TabIndex = 10;
+            this.storageLabel.Text = "Kosár teherbírása: 20 alma";
+            // 
+            // buyBiggerStorage
+            // 
+            this.buyBiggerStorage.Location = new System.Drawing.Point(621, 141);
+            this.buyBiggerStorage.Name = "buyBiggerStorage";
+            this.buyBiggerStorage.Size = new System.Drawing.Size(75, 23);
+            this.buyBiggerStorage.TabIndex = 11;
+            this.buyBiggerStorage.Text = "10 alma";
+            this.buyBiggerStorage.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(504, 146);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Nagyobb kosár";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(519, 166);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "(+5 alma)";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(528, 214);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "(-1 ütés)";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(504, 196);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Gyorsabb szedés";
+            // 
+            // buyFasterHit
+            // 
+            this.buyFasterHit.Location = new System.Drawing.Point(621, 191);
+            this.buyFasterHit.Name = "buyFasterHit";
+            this.buyFasterHit.Size = new System.Drawing.Size(75, 23);
+            this.buyFasterHit.TabIndex = 14;
+            this.buyFasterHit.Text = "30 alma";
+            this.buyFasterHit.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -139,6 +221,15 @@ namespace AppleTimer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.kosar);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.buyFasterHit);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buyBiggerStorage);
+            this.Controls.Add(this.storageLabel);
+            this.Controls.Add(this.appleCounter);
             this.Controls.Add(this.alma);
             this.Controls.Add(this.kez);
             this.Controls.Add(this.fej);
@@ -146,7 +237,6 @@ namespace AppleTimer
             this.Controls.Add(this.lomb);
             this.Controls.Add(this.torzs);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.kosar);
             this.Controls.Add(this.fold);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -160,6 +250,7 @@ namespace AppleTimer
             ((System.ComponentModel.ISupportInitialize)(this.kez)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alma)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -174,6 +265,14 @@ namespace AppleTimer
         private System.Windows.Forms.PictureBox fej;
         private System.Windows.Forms.PictureBox kez;
         private System.Windows.Forms.PictureBox alma;
+        private System.Windows.Forms.Label appleCounter;
+        private System.Windows.Forms.Label storageLabel;
+        private System.Windows.Forms.Button buyBiggerStorage;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buyFasterHit;
     }
 }
 
