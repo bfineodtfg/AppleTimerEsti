@@ -12,9 +12,20 @@ namespace AppleTimer
 {
     public partial class Form1 : Form
     {
+        Timer walkTimer = new Timer();
         public Form1()
         {
             InitializeComponent();
+            Start();
+        }
+        void Start() {
+            StartTimers();
+        }
+        void StartTimers() { 
+            
+        }
+        void WalkEvent(object s, EventArgs e) { 
+            
         }
     }
 }
